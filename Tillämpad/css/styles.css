@@ -18,7 +18,7 @@ body {
     height: 75px;
     line-height: 50px;
     padding-bottom: 4px;
-    background-color: #21bd8e;
+    background-color: #6ed1e2;
     color: #fff;
 }
 #mainheader h1 { margin: 10px 0 0 10%; float: left; }
@@ -60,10 +60,8 @@ body {
 .container { 
     width: 96%;
     padding: 2%;
-    margin: 1em auto 1em auto;
+    margin: 4% auto 4% auto;
     max-width: 1050px; 
-    background-color: #fff;
-    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.2);
     border-radius: .3em;
 }
 .left {
