@@ -1,8 +1,9 @@
-<nav class="mainmenu">
-    <ul>
-        <li><a href="index.php">Hem</a></li>
-        <li><a href="omsidan.php">Om sidan</a></li>
-        <li><a href="kontakt.php">Kontakt</a></li>
-        <li><a href="includes/logoutfunction.php">Logga ut</a></li>
-    </ul>
-</nav>
+<div id="menu">
+                <div class="dropdown">
+                    <button class="dropbtn">Meny</button>
+                    <div class="dropdown-content">
+                    <a href="index.php">Startsida</a>
+                    <a href="#">Om sidan</a>
+                    </div>
+                </div>
+            </div>
