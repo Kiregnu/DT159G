@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>PlottTest 2.1</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script>		
+		// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+		function loadDoc()
+		{
+			let url = "plotDataPHP.php";
+
+			fetch( url, {method: 'GET'} )
+				.then( resp => resp.json() )
+				.then(
+					data =>
+					{
+						Plotly.newPlot('graf', data );
+						console.log( "Data i plottning: ",data );
+					}
+				)
+				.catch( data => console.error("FEEEL: ", data) );
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<div id="graf" style="width: 480px; height: 400px;"><!-- Plotly ritar här --></div>
+
+	<h1>Plott av data</h1>
+	<p>Data hårdkodat i PHP.</p>
+	
+	<button type="button" onclick="loadDoc()">Ladda om</button>
+</body>
+
+</html>
+
