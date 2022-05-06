@@ -10,3 +10,19 @@ async function getapi(url) {
 }
 getapi(url);
 
+function loadDoc() {
+  let url = "includes/data.php";
+
+  fetch( url, {method: 'GET'} )
+    .then( resp => resp.json() )
+      .then( plottning )
+      .catch( data => console.error("FEL: ", data) );
+}
+
+var layout = {
+  title: "Sundsvall"
+};
+
+function plottning( data ) {
+  Plotly.newPlot('graf', data, layout );
+}

@@ -4,6 +4,7 @@
     <head>
         <link rel="stylesheet" href="css/styles.css?v=<?php echo time(); ?>" type="text/css">
         <script src="js/main.js?v=<?php echo time(); ?>"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
     <body>
         <header id="mainheader">
