@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Plott - JS 2</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script>
+
+		function startaUpp() {
+			document.getElementById( "LoadButton" ).addEventListener( "click", loadPlot );
+		}
+		
+		
+		// Datat struturerat för plotly https://plot.ly/javascript/bar-charts/
+		var data = [
+			{
+				x: ['giraffes', 'orangutans', 'monkeys'],
+				y: [20, 50, 23],
+				type: 'bar'
+			}
+		];
+		
+
+		function loadPlot() {
+			Plotly.newPlot('graf', data );
+		};
+		
+		
+		// Här startar allt med att lägga till händelselyssnare för händelsen "DOMContentLoaded".
+		document.addEventListener("DOMContentLoaded", startaUpp	);
+
+	</script>
+
+</head>
+
+<body>
+	<div id="graf" style="width: 480px; height: 400px;"><!-- Plotly ritar här --></div>
+	
+	<h1>Plott av data</h1>
+	<p>Data hårdkodat i JS</p>
+	
+	<button type="button" id="LoadButton">Ladda om graf</button>
+</body>
+
+</html>
+

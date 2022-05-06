@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>PlottTest</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script>
+		
+		let url = "plotKommunREST_JSON.php";
+
+		function loadDocFetch() {
+			fetch( url, {method: 'GET'} )
+				.then( data => data.json() )
+				.then( plottning )
+				.catch( data => console.error(data) );
+		}
+
+
+		// Ett äldre alternativ.
+		function loadDoc() {
+			var xhttp = new XMLHttpRequest();
+		
+			xhttp.onreadystatechange = function()
+			{
+				if (this.readyState == 4 && this.status == 200)
+				{
+					var data = JSON.parse( this.responseText );
+					plottning( data );
+				}
+			};
+		
+			xhttp.open("GET", url, true);
+			xhttp.send();
+		}
+
+
+		function plottning( data )
+		{
+			Plotly.newPlot('graf', data );
+		}
+	</script>
+
+</head>
+
+<body>
+	<div id="graf" style="width: 1200px; height: 400px;"><!-- Plotly ritas här --></div>
+
+	<h1>Plott av data</h1>
+	<p>Data hämta från php, som i sin tur hämtar från en annan server via REST.</p>
+
+	<button type="button" onclick="loadDoc()">Ladda om med XHR</button>
+	<button type="button" onclick="loadDocFetch()">Ladda om med FETCH</button>
+</body>
+
+</html>
+
