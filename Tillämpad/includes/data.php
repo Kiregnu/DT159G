@@ -6,55 +6,54 @@
 	//$url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/´${lon}´/lat/´${lat}´/data.json";
 	
 	$lonlatarr = array (
-		[17.2664,62.4066],
-		[18.0549,59.3417],
-		[11.9924,57.7156]
+		[17.2664,62.4066], //sundsvall
+		[18.0549,59.3417], //sthlm
+		[11.9924,57.7156] //gtbg
 	);
 
-	// Skapa arrayer som är lämpliga för visualisering.
-	
 	$paramArr = array();
 
 	foreach ($lonlatarr as $value) {
 		
 		$lon = $value[0];
 		$lat = $value[1];
-		
-		
 		$url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/${lon}/lat/${lat}/data.json";
-
 
 		$response = \Httpful\Request::get($url)
 		->send();
 		
 		$inData =  json_decode( $response );
 	
-		// Sätter 
+		// Sätter värdena från hämtat JSON.
 		$tid="validTime";
 		$param="parameters";
 	
+		//Skapar arrayer som värden ska sparas i
 		$valueArr = array();
 		$tidArr = array();
 	
-		$chosenstat = "ws";
+		//Definierar vilken typ av data som ska hämtas.
+		$chosenstat = "t";
 
+		//Kollar genom all data som hämtas
 		foreach ( $inData->timeSeries as $prognos ) {
+			//Sparar alla tider i arrayen tidArr.
 			$tidArr[] = $prognos->$tid;
 
+			//Kollar igenom alla typer av data som ges av API.
 			for ($n=0;$n<18;$n++) {
 		
+				//Väljer ut den data som matchar den valda typen av data.
 				$cmp_t = strcmp($prognos->$param[$n]->name,$chosenstat);
 				if ($cmp_t == 0) {
 
+					//Sparar data i valueArr.
 					$valueArr[] = $prognos->$param[$n]->values[0];
 				}
-			}
-			
+			}	
 		}
-		//print_r($valueArr);
-		//print_r($valueArr);
+		//Lägger in alla värden i paramArr
 		array_push($paramArr,$valueArr);
-		//print_r($paramArr);		
 	}
 
 
@@ -63,17 +62,20 @@
 		[
 			"x" => $tidArr,
 			"y" => $paramArr[0],
-			"type" => "line"
+			"type" => "line",
+			"name" => "Sundsvall"
 		],
 		[
 			"x" => $tidArr,
 			"y" => $paramArr[1],
-			"type" => "line"
+			"type" => "line",
+			"name" => "Stockholm"
 		],
 		[
 			"x" => $tidArr,
 			"y" => $paramArr[2],
-			"type" => "line"
+			"type" => "line",
+			"name" => "Göteborg"
 		]
 	];
 	
