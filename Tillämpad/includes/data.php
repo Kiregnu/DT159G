@@ -6,15 +6,17 @@
 	//$url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/´${lon}´/lat/´${lat}´/data.json";
 	
 	$lonlatarr = array (
-		[17.2664,62.4066], //sundsvall
+		[17.2664,62.4066], //svall
 		[18.0549,59.3417], //sthlm
 		[11.9924,57.7156] //gtbg
 	);
 
 	$paramArr = array();
 
+	//Går igenom alla koordinater i lonlatarr.
 	foreach ($lonlatarr as $value) {
 		
+		//Sätter lat och lon, laddar om API.
 		$lon = $value[0];
 		$lat = $value[1];
 		$url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/${lon}/lat/${lat}/data.json";
@@ -35,19 +37,16 @@
 		//Definierar vilken typ av data som ska hämtas.
 		$chosenstat = "t";
 
-		//Kollar genom all data som hämtas
+		//Kollar genom all data som hämtas och sparar tiderna i array
 		foreach ( $inData->timeSeries as $prognos ) {
-			//Sparar alla tider i arrayen tidArr.
 			$tidArr[] = $prognos->$tid;
 
 			//Kollar igenom alla typer av data som ges av API.
 			for ($n=0;$n<18;$n++) {
 		
-				//Väljer ut den data som matchar den valda typen av data.
-				$cmp_t = strcmp($prognos->$param[$n]->name,$chosenstat);
-				if ($cmp_t == 0) {
-
-					//Sparar data i valueArr.
+				//Väljer ut den data som matchar den valda typen av data. Sparar då data i valueArr.
+				$cmp = strcmp($prognos->$param[$n]->name,$chosenstat);
+				if ($cmp == 0) {
 					$valueArr[] = $prognos->$param[$n]->values[0];
 				}
 			}	
