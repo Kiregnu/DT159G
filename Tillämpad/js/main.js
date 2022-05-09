@@ -21,7 +21,7 @@ function loadDoc() {
 
 var layout = {
   title: "Sundsvall"
-};
+}
 
 function plottning( data ) {
   Plotly.newPlot('graf', data, layout );
