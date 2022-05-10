@@ -3,7 +3,7 @@
                     <button class="dropbtn">Meny</button>
                     <div class="dropdown-content">
                     <a href="index.php">Startsida</a>
-                    <a href="#">Om sidan</a>
+                    <a href="statpage.php">Graf</a>
                     </div>
                 </div>
             </div>

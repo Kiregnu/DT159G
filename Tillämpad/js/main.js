@@ -28,3 +28,4 @@ var layout = {
 function plottning( data ) {
   Plotly.newPlot('graf', data, layout );
 }
+

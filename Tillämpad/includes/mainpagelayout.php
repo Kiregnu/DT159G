@@ -1,9 +1,14 @@
 <div class="contain">
 		<div id="graf"><!-- Plotly ritas här --></div>
+		
+		<div style="height:50px">
+			<a id="button" class="center" onclick="loadDoc()">Ladda om</a>
+		</div>
+		
+		<div id="statmenu">
+			<button>t</button>
+		</div>
 
-		<h1>Plott av data</h1>
-		<p>Data hämta från php, som i sin tur hämtar från en annan server via REST.</p>
-
-		<button type="button" onclick="loadDoc()">Ladda om</button>
+		<script> /*Laddar grafen på uppstart */ loadDoc(); </script>
 </div>
 

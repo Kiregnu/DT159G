@@ -38,6 +38,18 @@ body {
     border:2px solid #000000;
     border-radius:5px;
 }
+#button {
+    padding:10px 20px 10px 20px;
+    background-color: #1482a3;
+    color:#fff;
+    cursor:pointer;
+    border:5px solid #1482a3;
+    border-radius:2px;
+}
+
+#statmenu {
+    height:100px;
+}
 
 .contain { width: 100%; max-width: 1020px; margin: 0 auto; height:fit-content;}
 .container { 

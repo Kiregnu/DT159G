@@ -10,8 +10,14 @@
 		[18.0549,59.3417], //sthlm
 		[11.9924,57.7156] //gtbg
 	);
-
+	
 	$paramArr = array();
+
+	$chosenstat = "t";
+
+	function changeVar($var) {
+		$chosenstat=$var;
+	}
 
 	//Går igenom alla koordinater i lonlatarr.
 	foreach ($lonlatarr as $value) {
@@ -35,7 +41,7 @@
 		$tidArr = array();
 	
 		//Definierar vilken typ av data som ska hämtas.
-		$chosenstat = "t";
+		
 
 		//Kollar genom all data som hämtas och sparar tiderna i array
 		foreach ( $inData->timeSeries as $prognos ) {
