@@ -1,5 +1,5 @@
-<div id="contain">
-    <div style="height:200px">
-        
+<div id="start">
+    <div>
+        <h1>SKA VI HA EN STARTSIDA?!??!?!</h1>
     </div>
 </div>

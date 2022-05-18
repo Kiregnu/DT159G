@@ -8,6 +8,6 @@
     </head>
     <body>
         <header id="mainheader">
-            <h1>Hej och välkommen :)</h1>
+            <h1>WeatherCompare</h1>
             <?php include("mainmenu.php"); ?>
         </header>

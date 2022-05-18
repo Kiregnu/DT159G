@@ -22,7 +22,7 @@ function loadDoc() {
 }
 
 var layout = {
-  title: "data"
+  title: "Temperatur"
 }
 
 function plottning( data ) {
