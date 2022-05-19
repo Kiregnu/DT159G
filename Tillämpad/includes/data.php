@@ -1,4 +1,6 @@
 <?php
+
+
 	include('../biblo/httpful.phar');
 
     //Hämtar API från SMHI.
@@ -13,11 +15,8 @@
 	
 	$paramArr = array();
 
-	$chosenstat = "t";
-
-	function changeVar($var) {
-		$chosenstat=$var;
-	}
+	session_start(); 
+	$chosenstat = $_SESSION['chosenstat'];
 
 	//Går igenom alla koordinater i lonlatarr.
 	foreach ($lonlatarr as $value) {
