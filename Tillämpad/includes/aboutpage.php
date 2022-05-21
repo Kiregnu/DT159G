@@ -10,9 +10,8 @@
         <h2>Kontaktuppgifter:</h2>
             <h4>
             ered2000@student.miun.se; Erik Edvall Ung<br/>
-            rali2001@student.miun.se; Rasmus Linarsson <br/>
+            rali2001@student.miun.se; Rasmus Linnarsson <br/>
             tori2000@student.miun.se; Tomas Ringefors <br/>
-            BILDEN ::::: https://unsplash.com/photos/KWTkd7mHqKE
             </h4>
             
 </section>

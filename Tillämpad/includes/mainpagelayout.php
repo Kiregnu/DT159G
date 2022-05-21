@@ -8,20 +8,18 @@
 		
 		<div id="statmenu">
 		<form method="post" >
-		<label for="cars">Choose a car:</label>
-		<select name="cars" id="cars">
+		<label for="weather">Välj väderförhållande att analysera:</label>
+		<select name="weather" class="orderform">
   		<option value="t">Temp</option>
   		<option value="ws">Vindhastighet</option>
   		<option value="tstm">Åskmöjlighet</option>
-  		<option value="audi">Audi</option>
 		</select>
-
-  		<input type="submit" name="addpost">
+		<button class="btn" name="addpost" type="submit">Välj</button>
 		</form>
 		<?php
 			if(isset($_POST['addpost'])){
-			if(!empty($_POST['cars'])) {
-			$selected = $_POST['cars'];
+			if(!empty($_POST['weather'])) {
+			$selected = $_POST['weather'];
 			// $chosenstat = ;
 
 			 session_start();

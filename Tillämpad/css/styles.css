@@ -47,6 +47,12 @@ body {
     border:5px solid #1482a3;
     border-radius:2px;
 }
+.orderform{
+    width: 120px;
+    border-style: solid;
+    border-color: #1482a3;
+    border-width: 3px;
+}
 
 #statmenu {
     height:100px;
@@ -93,10 +99,9 @@ p {
     height: 500px;
 }
 #img{
-    width: 770px;
-    height: 500px;
-    margin-left: 3%;
-    margin-top: 5px;
+    width: 500px;
+    height: 700px;
+    margin-left: 10%;
     float:left;
 }
 
