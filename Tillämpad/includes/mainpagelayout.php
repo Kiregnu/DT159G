@@ -10,9 +10,10 @@
 		<form method="post" >
 		<label for="weather">Välj väderförhållande att analysera:</label>
 		<select name="weather" class="orderform">
-  		<option value="t">Temp</option>
+  		<option value="t">Temperatur</option>
   		<option value="ws">Vindhastighet</option>
   		<option value="tstm">Åskmöjlighet</option>
+		<option value="msl">Lufttryck</option>
 		</select>
 		<button class="btn" name="addpost" type="submit">Välj</button>
 		</form>

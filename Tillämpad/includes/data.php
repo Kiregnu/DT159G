@@ -10,7 +10,8 @@
 	$lonlatarr = array (
 		[17.2664,62.4066], //svall
 		[18.0549,59.3417], //sthlm
-		[11.9924,57.7156] //gtbg
+		[11.9924,57.7156], //gtbg
+		[13.0141,55.5782] //malmö
 	);
 	
 	$paramArr = array();
@@ -80,7 +81,14 @@
 			"y" => $paramArr[2],
 			"type" => "line",
 			"name" => "Göteborg"
+		],
+		[
+			"x" => $tidArr,
+			"y" => $paramArr[3],
+			"type" => "line",
+			"name" => "Malmö"
 		]
+		
 	];
 	
     // Serialisera till json-format.
