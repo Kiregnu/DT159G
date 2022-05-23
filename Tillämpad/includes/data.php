@@ -11,7 +11,8 @@
 		[17.2664,62.4066], //svall
 		[18.0549,59.3417], //sthlm
 		[11.9924,57.7156], //gtbg
-		[13.0141,55.5782] //malmö
+		[13.0141,55.5782], //malmö
+		[20.2333,67.8500] //kiruna
 	);
 	
 	$paramArr = array();
@@ -35,6 +36,7 @@
 		// Sätter värdena från hämtat JSON.
 		$tid="validTime";
 		$param="parameters";
+		$unit="unit";
 	
 		//Skapar arrayer som värden ska sparas i
 		$valueArr = array();
@@ -43,17 +45,21 @@
 		//Definierar vilken typ av data som ska hämtas.
 		
 
+
 		//Kollar genom all data som hämtas och sparar tiderna i array
 		foreach ( $inData->timeSeries as $prognos ) {
 			$tidArr[] = $prognos->$tid;
 
+			
+
 			//Kollar igenom alla typer av data som ges av API.
 			for ($n=0;$n<18;$n++) {
-		
+				
 				//Väljer ut den data som matchar den valda typen av data. Sparar då data i valueArr.
 				$cmp = strcmp($prognos->$param[$n]->name,$chosenstat);
 				if ($cmp == 0) {
 					$valueArr[] = $prognos->$param[$n]->values[0];
+					$dataunit= $prognos->$param[$n]->$unit;
 				}
 			}	
 		}
@@ -63,7 +69,8 @@
 
 
 	// Skapa ett PHP-objekt, med "JSON-kodat" data anpassat för plotly.
-	$data = [
+	$data = [ 
+			["yaxisunit" => $dataunit],
 		[
 			"x" => $tidArr,
 			"y" => $paramArr[0],
@@ -87,7 +94,13 @@
 			"y" => $paramArr[3],
 			"type" => "line",
 			"name" => "Malmö"
-		]
+		],
+		[
+            "x" => $tidArr,
+            "y" => $paramArr[4],
+            "type" => "line",
+            "name" => "Kiruna"
+        ]
 		
 	];
 	

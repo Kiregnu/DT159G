@@ -2,20 +2,17 @@
 <div class="contain">
 		<div id="graf"><!-- Plotly ritas här --></div>
 		
-		<div style="height:50px">
-			<a id="button" class="center" onclick="loadDoc()">Ladda om</a>
-		</div>
-		
-		<div id="statmenu">
+		<div id="statmenu" class="container">
 		<form method="post" >
-		<label for="weather">Välj väderförhållande att analysera:</label>
+		<label>Välj väderförhållande att analysera:</label>
 		<select name="weather" class="orderform">
-  		<option value="t">Temperatur</option>
+		<option value="" selected disabled hidden>Välj här</option>
+		<option value="t">Temperatur</option>
   		<option value="ws">Vindhastighet</option>
   		<option value="tstm">Åskmöjlighet</option>
 		<option value="msl">Lufttryck</option>
 		</select>
-		<button class="btn" name="addpost" type="submit">Välj</button>
+		<button id="graphbutton" name="addpost" type="submit">Välj</button>
 		</form>
 		<?php
 			if(isset($_POST['addpost'])){
@@ -27,7 +24,7 @@
    			$_SESSION['chosenstat'] = $selected;
 
 		} else {
-			echo 'Please select the value.';
+			echo 'Välj ett värde!!!!';
 		}
 		}
 		?>

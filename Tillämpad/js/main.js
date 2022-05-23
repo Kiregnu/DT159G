@@ -21,11 +21,43 @@ function loadDoc() {
       .catch( data => console.error("FEL: ", data) );
 }
 
-var layout = {
-  title: "Hur ska jag få denna att ändra?"
-}
 
+//Funktion som hämtar ut namn på yaxis, bestämmer titel på graf och plottar graf.
 function plottning( data ) {
+  const yaxisunit = data.shift();
+  var plottitle = "Title";
+
+  if (yaxisunit["yaxisunit"] == "Cel") {
+    plottitle = "Temperatur";
+  }
+  else if (yaxisunit["yaxisunit"] == "m/s") {
+    plottitle = "Vindhastighet";
+  }
+  else if (yaxisunit["yaxisunit"] == "percent") {
+    plottitle = "Sannolikhet för åska";
+  }
+  else if (yaxisunit["yaxisunit"] == "hPa") {
+    plottitle = "Lufttryck";
+  }
+
+  //document.getElementById("").value = plottitle;
+
+  var layout = {
+    title: plottitle,
+    yaxis: {
+      title: {
+        text: yaxisunit["yaxisunit"],
+        font: {
+          family: 'Courier New, monospace',
+          size: 18,
+          color: '#7f7f7f'
+        }
+      }
+    }
+  }
+
+  console.log(yaxisunit["yaxisunit"]);
+  
   Plotly.newPlot('graf', data, layout );
 }
 
