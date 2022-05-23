@@ -5,7 +5,7 @@
             <h4>
                 Vi på weatherCompare erbjuder korrekt och tydligt gjorda grafer som visar olika sorters<br> 
                 väderdata som jämför städers väderförhållanden i realtid och snar framtid. <br/><br/>
-                Vår vision för dig är att du som användare ska få en riktig bild av väderförhållanden på olika platser inom Sverige.<br/><br/>
+                Vår vision för dig är att du som användare ska få en verklig bild av väderförhållanden på olika platser inom Sverige.<br/><br/>
             </h4>
         <h2>Kontaktuppgifter:</h2>
             <h4>

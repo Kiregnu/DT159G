@@ -2,15 +2,14 @@ html, body {
     overflow:hidden;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Open Sans',Helvetica,sans-serif;
+    font-family: 'Calibri';
     font-size: 15px;
     font-weight: 300;
     line-height: 1.7em;
-    color: #333;
+    color: rgb(11, 28, 89);
     background-color: #f4f3f3;
 }
 
@@ -21,15 +20,21 @@ body {
     background-color: #6ed1e2;
     color: #fff;
 }
-#mainheader h1 { margin: 10px 0 0 10%; float: left; }
-#mainheader a { color: #fff; text-decoration: none; }
-#menu { float: right; margin-right: 10%; }
-
-
-#separator {
-    margin-left:25%;
-    margin-right:25%;
+#mainheader h1 { 
+    margin: 10px 0 0 10%;
+    float: left; 
 }
+
+#mainheader a { 
+    color: #fff; 
+    text-decoration: none; 
+}
+
+#menu { 
+    float: right; 
+    margin-right: 10%; 
+}
+
 
 #graf {
     margin-top: 2%;
@@ -75,18 +80,30 @@ body {
 }
 
 
-.center { text-align: center; }
-.message { font-size: 1.5em; font-weight: bold; }
-h1, h2, h3, h4, h5, h6 { font-weight: bold; }
-h1 { margin-bottom: 1em; }
-h2 { font-size: 28px; margin-top: 8px; margin-bottom: 16px; } 
-h3 { font-size: 20px; margin-top: 6px; margin-bottom: 6px; } 
-h4 { font-size: 16px; font-weight: 500; margin-top: 4px; margin-bottom: 4px; }
-
-p {
-    margin:0px;
-    padding:5px;
+h1, h2, h3, h4, h5, h6 { 
+    font-weight: bold; 
 }
+h1 { 
+    margin-bottom: 1em;
+}
+
+h2 { 
+    font-size: 28px; 
+    margin-top: 8px; 
+    margin-bottom: 16px; 
+} 
+h3 { 
+    font-size: 20px; 
+    margin-top: 6px; 
+    margin-bottom: 6px; 
+} 
+h4 { 
+    font-size: 16px; 
+    font-weight: 500; 
+    margin-top: 4px; 
+    margin-bottom: 4px; 
+}
+
 
 #start{
     margin-top: 2%;
