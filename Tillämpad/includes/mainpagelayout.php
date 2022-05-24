@@ -18,7 +18,6 @@
 					if(isset($_POST['addpost'])){
 					if(!empty($_POST['weather'])) {
 					$selected = $_POST['weather'];
-					// $chosenstat = ;
 
 					session_start();
 					$_SESSION['chosenstat'] = $selected;
