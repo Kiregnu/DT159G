@@ -117,8 +117,7 @@ h4 {
     height: 525px;
 }
 #img{
-    width: 800px;
-    height: 550px;
+    width: 43%;
     margin-left: 5%;
     margin-top: 2%;
     border: solid;
@@ -185,4 +184,3 @@ footer {
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #1a68a8;}
-
