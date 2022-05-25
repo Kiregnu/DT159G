@@ -16,6 +16,8 @@
 			<option value="ws">Vindhastighet</option>
 			<option value="tstm">Åskmöjlighet</option>
 			<option value="msl">Lufttryck</option>
+			<option value="r">Luftfuktighet</option>
+			<option value="pmean">Nederbörd</option>
 			</select>
 			<button id="graphbutton" name="addpost" type="submit">Välj</button>
 			</form>

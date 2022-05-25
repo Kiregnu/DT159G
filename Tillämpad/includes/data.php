@@ -70,7 +70,9 @@
 
 	// Skapa ett PHP-objekt, med "JSON-kodat" data anpassat för plotly.
 	$data = [ 
-			["yaxisunit" => $dataunit],
+		["yaxisunit" => $dataunit,
+		"chosenstat" => $chosenstat
+		],
 		[
 			"x" => $tidArr,
 			"y" => $paramArr[0],
