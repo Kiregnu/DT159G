@@ -1,8 +1,8 @@
-var url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/17.2664/lat/62.4066/data.json";
+var testurl = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/17.2664/lat/62.4066/data.json";
 
 //skriver data i konsol (bara för att visualisera)
-async function getapi(url) {
-  const response = await fetch(url);
+async function getapi(testurl) {
+  const response = await fetch(testurl);
     
   // Sparar data i JSON-format
   var data = await response.json();
@@ -40,7 +40,6 @@ function plottning( data ) {
     plottitle = "Lufttryck";
   }
 
-  //document.getElementById("").value = plottitle;
 
   var layout = {
     title: plottitle,
@@ -56,7 +55,6 @@ function plottning( data ) {
     }
   }
 
-  console.log(yaxisunit["yaxisunit"]);
   
   Plotly.newPlot('graf', data, layout );
 }

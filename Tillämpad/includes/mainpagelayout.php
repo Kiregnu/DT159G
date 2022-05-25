@@ -3,6 +3,11 @@
 		<div id="graf"><!-- Plotly ritas här --></div>
 		
 		<div id="statmenu" class="container">
+			<div>
+				<h3>På denna sida kan du hitta information om olika sorters väderförhållanden, allt genom några knapptryck nedan:</h3>
+				<h4>All data är hämtat från SMHI:s öppna API</h4>
+			</div>
+			<div class=order>
 			<form method="post" >
 			<label>Välj väderförhållande att analysera:</label>
 			<select name="weather" class="orderform">
@@ -27,8 +32,9 @@
 				}
 				}
 				?>
+			</div>
 		</div>
 
-		<script> /*Laddar grafen på uppstart */ loadDoc(); </script>
+		<script>loadDoc();  /*Laddar grafen på uppstart */ </script>
 </div>
 

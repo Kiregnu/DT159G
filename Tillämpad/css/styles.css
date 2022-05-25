@@ -53,6 +53,10 @@ body {
     border:5px solid #1482a3;
     border-radius:2px;
 }
+.order{
+    margin-top: 2%;
+}
+
 .orderform{
     width: 120px;
     border-style: solid;

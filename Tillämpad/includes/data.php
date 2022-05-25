@@ -53,7 +53,7 @@
 			
 
 			//Kollar igenom alla typer av data som ges av API.
-			for ($n=0;$n<18;$n++) {
+			for ($n=0;$n<19;$n++) {
 				
 				//Väljer ut den data som matchar den valda typen av data. Sparar då data i valueArr.
 				$cmp = strcmp($prognos->$param[$n]->name,$chosenstat);
